@@ -177,3 +177,10 @@ GIT_PS1_SHOWUPSTREAM=auto
 
 PS1='[\[\033[32m\]\u@\h\[\033[00m\] \[\033[33m\]\w\[\033[1;36m\]$(__git_ps1 " (%s)")\[\033[00m\]]\n\$ '
 
+# Abbreviation
+if [ -f ~/bash-abbrev-alias/abbrev-alias.plugin.bash ]; then
+    source ~/bash-abbrev-alias/abbrev-alias.plugin.bash
+else
+    git clone https://github.com/momo-lab/bash-abbrev-alias.git ~/bash-abbrev-alias
+fi
+abbrev-alias -g g="git"
